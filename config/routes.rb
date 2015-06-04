@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'post_controller/index'
+  root 'post_controller#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
