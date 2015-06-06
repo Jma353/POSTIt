@@ -17,12 +17,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$gray-medium-light: #eaeaea;
+$button-color: #3275C1;
+$ruby-red: #810000;
+
 #logo {
 	color: white;
 	font-family: Courier;
 }
 
 body {
+	font-family: Courier;
 	padding-top: 65px;
 }
 
@@ -30,4 +35,68 @@ body {
 	li {
 		font-family: Courier;
 	}
+}
+
+
+
+#center_logo {
+	font-family: Courier;
+	text-align: center;
+}
+
+.postAction {
+	text-align: center;
+}
+
+footer { 
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid $gray-medium-light;
+	color: $gray-medium-light;
+	a {
+		color: #232;
+
+		&:hover {
+			color: #832;
+		}
+
+	}
+
+	small {
+		float: left;
+	}
+
+	ul {
+		float: right;
+		list-style: none;
+		
+		li {
+			float: left;
+			margin-left: 15px;
+		}
+
+	}
+
+}
+
+#codeButton {
+	font-family: Courier;
+}
+
+#largeInput {
+	height: 75px;
+}
+
+#postForm {
+	font-family: Courier;
+}
+
+#postHeading {
+	color: $button-color;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.poster {
+	color: $ruby-red;
 }

@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1 id="center_logo">POST It</h1> 
+		<div class="postAction">
+			<%= link_to "Write a POST", posts_new_path, class: "btn btn-lg btn-primary", 
+																														id: "codeButton" %> 
+		</div>
+	</div> 
+	<% @posts.each do |post| %> 
+		<div class="panel panel-default">
+			<div class="panel-heading" id="postHeading"><%= post.postName %></div> 
+			<div class="panel-body"><%= post.content %></div>
+			<div class="panel-footer"><div class="poster">Poster:</div> <%= post.poster %></div>
+		</div>
+	<% end %>
+
+</div>
