@@ -1,4 +1,4 @@
-== POST It 
+POST It 
 
 A basic Rails app that involves posts and basic Bootstrap styling.  
 
