@@ -7,11 +7,13 @@
 		</div>
 	</div> 
 	<% @posts.each do |post| %> 
-		<div class="panel panel-default">
-			<div class="panel-heading" id="postHeading"><%= post.postName %></div> 
-			<div class="panel-body"><%= post.content %></div>
-			<div class="panel-footer"><div class="poster">Poster:</div> <%= post.poster %></div>
-		</div>
+		<div class="col-sm-12">
+			<div id="postHeading"><%= post.postName %></div> 
+		</div> 
+			<div class="panel-body col-sm-12"><%= post.content %></div>
+			<div class="col-sm-12" id="postFoot"><div class="poster col-sm-9">Poster:</div> <%= post.poster %></div>
+			
+
 	<% end %>
 
 </div>

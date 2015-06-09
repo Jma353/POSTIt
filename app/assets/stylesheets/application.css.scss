@@ -95,8 +95,16 @@ footer {
 	color: $button-color;
 	font-weight: bold;
 	font-size: 20px;
+	text-align: left;
+	border-bottom: 1px $button-color solid;
 }
 
 .poster {
 	color: $ruby-red;
+	text-align: right;
 }
+
+#postFoot {
+	margin-bottom: 40px;
+}
+
