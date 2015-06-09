@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   get 'users/new'
-
-  get 'users/create'
-
   get 'posts/index'
   get 'posts/new'
   root 'posts#index'
