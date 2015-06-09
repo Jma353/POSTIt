@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '3.2.0.2'
 
+gem 'bcrypt-ruby', '~> 3.1.5'
+
 gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -48,6 +50,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 
   gem 'capybara'
+
+  gem 'shoulda-matchers', require: false
 
   
 end
