@@ -52,6 +52,9 @@ describe "Testing Validations" do
 		expect(user).to_not be_valid
 	end 
 
+	it "User should have many posts" do 
+		user.should have_many(:posts)
+	end 
 	
 	
 end 

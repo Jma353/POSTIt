@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
 																		too_short: "Must have at least %{count} characters",
 																		too_long: "Must have maximum %{count} characters" }
 	validates :content, presence: true, length: { minimum: 10 }
-	validates :poster, presence: true, length: { minimum: 10 }
+	belongs_to :user
 		
 
 end

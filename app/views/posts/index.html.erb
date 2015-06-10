@@ -14,6 +14,7 @@
 		<% end %> 
 
 	</div> 
+	<% if session[:user_id] != nil %> 
 	<% @posts.each do |post| %> 
 		<div class="col-sm-12">
 			<div id="postHeading"><%= post.postName %></div> 
@@ -21,9 +22,10 @@
 			<div class="panel-body col-sm-12"><%= post.content %></div>
 			<div class="col-sm-12" id="postFoot">
 				<div class="poster col-sm-9">Poster:</div> 
-			<%= post.poster %>
+			<%= User.find(post.user_id).email %>
 			</div>
 			
 	<% end %>
+	<% end %> 
 
 </div>

@@ -9,7 +9,9 @@ class PostsController < ApplicationController
   end 
 
   def create
-  	@post = Post.new(post_params)
+    @user = User.find(session[:user_id])
+  	@post = @user.posts.create(post_params)
+    # Makes a post associated w/a user
   	if @post.save
   		flash[:success] = "Nice post!"
   		redirect_to root_path 
@@ -21,7 +23,7 @@ class PostsController < ApplicationController
   private 
 
   	def post_params
-  		params.require(:post).permit(:postName, :content, :poster)
+  		params.require(:post).permit(:postName, :content)
   	end
 
 end
