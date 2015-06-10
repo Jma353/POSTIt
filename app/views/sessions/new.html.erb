@@ -1,0 +1,21 @@
+<div class="panel-group col-sm-6"> 
+	<div class="panel-heading" id="postHeading">
+		Login
+	</div> 
+	<div class="panel-body">
+		<%= form_for :session do |f| %> 
+			<%= f.label :email %> 
+			<%= f.email_field :email, class: "form-control" %> 
+
+			<%= f.label :password %> 
+			<%= f.password_field :password, class: "form-control" %> 
+	</div> 
+	<div class="col-sm-2"> 
+			<%= f.submit "Login", class: "btn btn-primary" %> 
+		<% end %> 
+	</div>
+	<div class="col-sm-4">
+		Don't have an account? Sign up <%= link_to "HERE", users_new_path %> 
+	</div>
+
+</div>

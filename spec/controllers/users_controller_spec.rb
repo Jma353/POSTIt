@@ -1,18 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, :type => :controller do
-  describe "Routing tests" do 
-    it "new" do 
+  describe "GET new test" do 
+    it "edition 1" do 
       expect(get: users_new_path).to route_to(controller: "users", action: "new")
     end 
     subject { get :new }
     # ABOVE MUST BE OUTSIDE OF THE IT BLOCK 
-    it "new 2" do 
+    it "edition 2" do 
       expect(subject).to render_template(:new)
     end 
   end 
 
-  describe "POST tests" do 
+  describe "POST create test" do 
     let(:valid_attributes) { 
       {
         first_name: "Joe", 
@@ -30,7 +30,7 @@ RSpec.describe UsersController, :type => :controller do
       response.should render_template("new")
     end 
 
-    it "post valiid information and expect redirect" do 
+    it "post valid information and expect redirect" do 
       puts valid_attributes
       post :create, user: valid_attributes
       response.should redirect_to(posts_index_path)
@@ -49,6 +49,10 @@ RSpec.describe UsersController, :type => :controller do
       expect(User.count).to eq(0)
     end 
   end 
+
+  # describe "" do 
+
+  # end 
 
 
 end 

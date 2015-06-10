@@ -1,7 +1,9 @@
 <footer class="footer col-sm-12">
 	<nav>
 		<ul>
-			<li><a href="">Sample Link 1</a></li>
+			<% if session[:user_id] != nil %> 
+				<li><%= link_to "Log Out", login_path, :method => :delete %></li>
+			<% end %>
 			<li><a href="">Sample Link 2</a></li>
 			<li><a href="">Sample Link 3</a></li>
 		</ul>
